@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Ilia Cheshev](https://up.htmlacademy.ru/react/16/user/581977).
-* Наставник: `Неизвестно`.
+* Наставник: [Arthur Litovko](https://htmlacademy.ru/profile/id6927).
 
 ---
 
