@@ -5,10 +5,7 @@ type MainProps = {
 }
 
 function Main({numberOfRentalOffers}: MainProps): JSX.Element {
-  const cityCards: Array<JSX.Element> = [];
-  for (let i = 0; i < 5; i++) {
-    cityCards.push(<CityCard key={i}/>);
-  }
+  const cityCards: Array<JSX.Element> = Array.from({length: 5}, (_, i) => <CityCard key={i}/>);
 
   return (
     <div className="page page--gray page--main">
