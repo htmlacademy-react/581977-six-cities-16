@@ -1,12 +1,12 @@
-import CityCard from '../../components/city-card/city-card.tsx';
+import {Offers} from '../../types/offer.ts';
+import OffersList from '../../components/offers-list/offers-list.tsx';
 
 type MainProps = {
   numberOfRentalOffers: number;
+  offers: Offers;
 }
 
-function Main({numberOfRentalOffers}: MainProps): JSX.Element {
-  const cityCards: Array<JSX.Element> = Array.from({length: 5}, (_, i) => <CityCard key={i}/>);
-
+function Main({numberOfRentalOffers, offers}: MainProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -96,9 +96,7 @@ function Main({numberOfRentalOffers}: MainProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                {cityCards}
-              </div>
+              <OffersList offers={offers} />
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
